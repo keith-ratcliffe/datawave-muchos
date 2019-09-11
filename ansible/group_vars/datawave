@@ -1,5 +1,5 @@
-dw_checkout_version: 116e1f87e2879fea498a76b4903e578cc6a06dda
-dw_project_version: 2.4.0-SNAPSHOT
+dw_checkout_version: 2.6.24
+dw_project_version: 2.6.24
 
 # E.g., some other stuff you may consider overriding at some point...
 
@@ -17,20 +17,22 @@ dw_project_version: 2.4.0-SNAPSHOT
 # corpus are ingested into the same date partition (YYYYMMDD_*)
 # E.g., Wikipedia
 
-#dw_num_shards: 100
+dw_num_shards: 300
 
 # A few directories that you should ensure have adequate free space...
 
 # ~3GB on the proxy host to build and assemble all DW artifacts...
-#dw_clone_dir: "/media/ephemeral0/datawave-source"
+dw_clone_dir: "/data0/datawave-source"
 
 # ~3GB on the proxy host for the local m2 repo...
 #dw_m2_repo_dir: "/media/ephemeral0/.m2/repository"
 
 # ~20GB on the proxy host for the compressed Wikipedia dump and index files...
-#wiki_dump_local_dir: /media/ephemeral0/{{ wiki_dump_lang }}wiki-{{ wiki_dump_date }}
+wiki_dump_local_dir: /data00/{{ wiki_dump_lang }}wiki-{{ wiki_dump_date }}
 
 # Ingest tuning (to control the number of mappers and concurrent jobs)
 
-#dw_live_max_files_per_job: 10
-#dw_live_max_ingest_jobs: 10
+dw_live_max_files_per_job: 10
+dw_live_max_ingest_jobs: 3
+
+

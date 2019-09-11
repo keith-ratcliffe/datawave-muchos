@@ -11,18 +11,18 @@
 # Host for running ingest processes: flag makers, bulk loaders, ingest jobs, etc
 
 [ingestmaster]
-ingest1
+dw
 
 # Host to run the MR job history server
 
 [jobhistoryserver]
-leader2
+am
 
 # Host(s) to deploy query and other web services
 # TODO: provide load balancing option for web servers
 
 [webservers]
-webserver1
+dw
 
 # If ingesting Wikipedia data, your proxy host will download, extract, and write bz2
 # streams to hdfs (See roles/wikipedia/README)
@@ -51,3 +51,4 @@ jobhistoryserver
 webservers
 wikipedia
 tvmaze
+
