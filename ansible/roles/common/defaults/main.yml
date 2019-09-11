@@ -16,13 +16,13 @@ dw_force_redeploy: False
 
 dw_build_profile: "dev"
 dw_project_version: "2.4.0-SNAPSHOT"
-dw_clone_dir: "{{ cluster_basedir }}/datawave-source"
+dw_clone_dir: "{{ user_home }}/datawave-source"
 dw_repo: "https://github.com/NationalSecurityAgency/datawave.git"
 dw_checkout_version: "master"
 dw_read_properties_version: "2.0.1"
 dw_assert_properties_version: "2.0"
-dw_build_property_overrides_dir: "{{ cluster_basedir }}/.m2/datawave/properties"
-dw_m2_repo_dir: "{{ cluster_basedir }}/.m2/repository"
+dw_build_property_overrides_dir: "{{ user_home }}/.m2/datawave/properties"
+dw_m2_repo_dir: "{{ user_home }}/.m2/repository"
 dw_build_command: "mvn -P{{ dw_build_profile }} -Dmaven.repo.local={{ dw_m2_repo_dir }} -Ddeploy -Dtar -Ddist -DskipTests clean install"
 
 # Accumulo
